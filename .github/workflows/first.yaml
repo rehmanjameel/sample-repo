@@ -32,8 +32,7 @@ jobs:
       - name: Print date for third job
         run: echo "::set-output name=date::$(date +'%d-$m-%Y')"
   job4:
-    deploy: 
-    needs: [job1, job2]
+    needs: [job1, job2, job3]
     name: Forth job with dependency
     runs-on: ubuntu-latest
     steps:
